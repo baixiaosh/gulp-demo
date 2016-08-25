@@ -1,0 +1,49 @@
+/*文字*/
+
+.tx-tellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.txt-indent {
+  text-indent: 2em;
+}
+
+@for $i from 1 through 5 {
+  .txt-line-#{$i} {
+    line-height: $i;
+  }
+}
+
+.txt-line-60p {
+  line-height: 60px;
+}
+
+@for $i from 12 through 30 {
+  @if $i%2==0 {
+    .txt-#{$i} {
+      font-size: $i*1px;
+    }
+  }
+}
+
+.txt-line-normal {
+  line-height: 1.5;
+}

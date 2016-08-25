@@ -1,0 +1,13 @@
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+@mixin grid($item:1) {
+  overflow: hidden;
+  .grid-item {
+    float: left;
+    box-sizing: border-box;
+    width: 100%/$item;
+  }
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+$_colorA9A9A9: #A9A9A9;
+
+/*全局样式*/
+
+html,
+body {
+  font-family: "Microsoft Yahei", "黑体";
+}
+
+
+/*默认样式设置*/
+
+input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.underline {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input.placeholder {
+  color: $_colorA9A9A9;
+}
+
+::-webkit-input-placeholder {
+  color: $_colorA9A9A9;
+}
+
+:-moz-placeholder {
+  color: $_colorA9A9A9;
+}
+
+::-moz-placeholder {
+  color: $_colorA9A9A9;
+}
+
+:-ms-input-placeholder {
+  color: $_colorA9A9A9;
+}
+
+

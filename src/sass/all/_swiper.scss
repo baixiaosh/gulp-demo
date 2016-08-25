@@ -1,0 +1,42 @@
+/*轮播图*/
+
+.s-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  .s-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    .s-slide {
+      float: left;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .s-pager {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin: 10px 5px;
+      border-radius: 50%;
+      background: $color000;
+      @include opacity(30);
+      cursor: pointer;
+      &.active {
+        @include opacity(100);
+        background: $color37a5a5;
+      }
+    }
+  }
+}

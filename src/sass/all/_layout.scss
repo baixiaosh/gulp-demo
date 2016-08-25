@@ -1,0 +1,194 @@
+/*布局文件居中*/
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+img.block {
+  display: block;
+  width: 100%;
+}
+
+.layout-center {
+  width: $defaultWidth;
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  zoom: 1;
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+/*边距*/
+
+.margin-0 {
+  margin: 0;
+}
+
+.margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin {
+  margin: $distance;
+}
+
+.margin-l {
+  margin: $distance-l;
+}
+
+.margin-s {
+  margin: $distance-s
+}
+
+.margin-h {
+  margin-left: $distance;
+  margin-right: $distance;
+}
+
+.margin-v {
+  margin-top: $distance;
+  margin-bottom: $distance;
+}
+
+.margin-h-l {
+  margin-left: $distance-l;
+  margin-right: $distance-l;
+}
+
+.margin-v-l {
+  margin-top: $distance-l;
+  margin-bottom: $distance-l;
+}
+
+.margin-h-s {
+  margin-left: $distance-s;
+  margin-right: $distance-s;
+}
+
+.margin-v-s {
+  margin-top: $distance-s;
+  margin-bottom: $distance-s;
+}
+
+.margin-xs {
+  margin: $distance-xs
+}
+
+.margin-h-xs {
+  margin-left: $distance-xs;
+  margin-right: $distance-xs;
+}
+
+.margin-v-xs {
+  margin-top: $distance-xs;
+  margin-bottom: $distance-xs;
+}
+
+.padding {
+  padding: $distance;
+}
+
+.padding-h {
+  padding-left: $distance;
+  padding-right: $distance;
+}
+
+.padding-v {
+  padding-top: $distance;
+  padding-bottom: $distance;
+}
+
+.padding-s {
+  padding: $distance-s;
+}
+
+.padding-h-s {
+  padding-left: $distance-s;
+  padding-right: $distance-s;
+}
+
+.padding-v-s {
+  padding-top: $distance-s;
+  padding-bottom: $distance-s;
+}
+
+.padding-xs {
+  padding: $distance-xs;
+}
+
+.padding-h-xs {
+  padding-left: $distance-xs;
+  padding-right: $distance-xs;
+}
+
+.padding-v-xs {
+  padding-top: $distance-xs;
+  padding-bottom: $distance-xs;
+}
+
+@each $item in $margins {
+  .margin-#{$item} {
+    margin-#{$item}: $distance;
+  }
+  .margin-#{$item}-l {
+    margin-#{$item}: $distance-l;
+  }
+  .margin-#{$item}-s {
+    margin-#{$item}: $distance-s;
+  }
+  .margin-#{$item}-xs {
+    margin-#{$item}: $distance-xs;
+  }
+  .padding-#{$item} {
+    padding-#{$item}: $distance;
+  }
+  .padding-#{$item}-s {
+    padding-#{$item}: $distance-s;
+  }
+  .padding-#{$item}-xs {
+    padding-#{$item}: $distance-xs;
+  }
+}
+
+@for $i from 2 through 4 {
+  .grid-#{$i} {
+    @include grid($i);
+  }
+}
